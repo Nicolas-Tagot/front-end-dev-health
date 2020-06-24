@@ -1,0 +1,92 @@
+.top{
+  height: 50px;
+  width: 100%;
+  background-color: blue;
+  display: flex;
+  padding: 10px;
+
+}
+.login{
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: red;
+  transition: 0.2s;
+}
+.login:hover{
+  transform: scale(1.1);
+  transition: 3s;
+}
+.champ{
+  width: 10px;
+  transition: 0.1s;
+}
+.champ:hover{
+  width: 260px;
+  transition: 2.5s;
+}
+.valid:hover{
+  background-color: green;
+  transition: 0.1s;
+}
+.centre{
+  display: flex;
+  width: 90%;
+  margin: auto;
+  height: 80vh;
+
+}
+.navigation{
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+.btnNav{
+  width: 200px;
+  height: 100px;
+}
+.visual{
+  width: 100%;
+  height: 100%;
+
+}
+.etatG{
+  padding: 9px;
+  width: 200px;
+  margin-top: 5px;
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  align-content: space-around;
+  background-color: blue;
+    transition: 0.6s;
+    border-radius: 5%;
+  }
+.etatG:hover{
+  transform: scale(1.03);
+  transition: 0.6s;
+}
+
+.etatC{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: green;
+  border-style: solid;
+  border: 2px;
+  border-radius: 50%
+}
+.etatR{
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: red;
+  border-style: solid;
+  border: 2px;
+  border-radius: 50%
+}
