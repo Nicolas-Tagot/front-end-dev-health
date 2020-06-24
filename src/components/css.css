@@ -1,7 +1,7 @@
 .top{
   height: 50px;
   width: 100%;
-  background-color: blue;
+  background-color: #0596de;
   display: flex;
   padding: 10px;
 
@@ -11,12 +11,12 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: red;
-  transition: 0.2s;
+  background: linear-gradient(180deg, #ffc164 0%, #f59300 46.12%, #f59300 97.02%);
+  transition: 2s;
 }
 .login:hover{
-  transform: scale(1.1);
-  transition: 3s;
+  transform: scale(1.2);
+  transition: 1s;
 }
 .champ{
   width: 10px;
@@ -26,8 +26,8 @@
   width: 260px;
   transition: 2.5s;
 }
-.valid:hover{
-  background-color: green;
+.valid{
+  background: linear-gradient(180deg, #ffc164 0%, #f59300 46.12%, #f59300 97.02%);
   transition: 0.1s;
 }
 .centre{
@@ -53,13 +53,13 @@
 }
 .etatG{
   padding: 9px;
-  width: 200px;
+  width: 500px;
   margin-top: 5px;
   margin-left: 30px;
   display: flex;
   align-items: center;
   align-content: space-around;
-  background-color: blue;
+  background-color: #DAFFFF;
     transition: 0.6s;
     border-radius: 5%;
   }
@@ -68,7 +68,7 @@
   transition: 0.6s;
 }
 
-.etatC{
+.etat{
   display: flex;
   align-items: center;
   margin-right: 20px;
@@ -79,14 +79,12 @@
   border: 2px;
   border-radius: 50%
 }
-.etatR{
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  width: 30px;
-  height: 30px;
+.R{
   background-color: red;
-  border-style: solid;
-  border: 2px;
-  border-radius: 50%
-}
+  }
+  .V {
+      background-color: green;
+  }
+  .Y {
+      background-color: yellow;
+  }

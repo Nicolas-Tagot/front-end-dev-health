@@ -12,27 +12,27 @@ function Suivis() {
   return (
     <div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered"> Taux insuline: 30mg - Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">Taux insuline: 30mg  - Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">Taux insuline: 30mg - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">Taux insuline: 30mg  - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">prise du poids : 60kg - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat Y" ></div>
         <p className="centered">Taux insuline: 30mg - 10:50</p>
       </div>
     </div>

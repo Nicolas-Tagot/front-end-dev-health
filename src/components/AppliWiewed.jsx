@@ -12,27 +12,27 @@ function AppliWiewed() {
   return (
     <div>
     <div className="etatG">
-      <div className="etatR" >Call</div>
+      <div className="etat R" ></div>
       <p className="centered">Bot send message to "Mum" for "News" etat= "mal"</p>
     </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">" Mal" le Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">"Tout va bien" le Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">"Tout va bien" le Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
-        <div className="etatC" >:)</div>
+        <div className="etat V" ></div>
         <p className="centered">Mardi 25 - 10:50</p>
       </div>
     </div>
