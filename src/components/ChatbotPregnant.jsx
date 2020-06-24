@@ -13,16 +13,22 @@ const theme = {
   botFontColor: '#fff',
   userBubbleColor: '#fff',
   userFontColor: '#4a4a4a',
+  botAvatar: 'https://image.freepik.com/vecteurs-libre/icone-medecin-avatar-blanc_136162-58.jpg',
 };
 
 class SimpleForm extends Component {
+  simple(){
+    console.log('click');
+  }
+
   render() {
     return (
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme} >
       <ChatBot
       headerTitle="Doctobot"
         steps={[
           {
+            function: this.simple(),
             id: '1',
             message: 'Bonjour Marie, Félicitations ! Dr Colas m\'informe que tu commences ton deuxième trimestre de grossesse, comment ça se passe ?',
             trigger: '2',
@@ -30,7 +36,7 @@ class SimpleForm extends Component {
           {
             id: '2',
             options: [
-              { value: 'Très bien', label: 'Très bien', trigger: '4' },
+              { value: 'Très bien', label: 'Très bien', trigger: '4'},
               { value: 'Bien', label: 'Bien', trigger: '4' },
               { value: 'Moyen', label: 'Moyen', trigger: '3' },
               { value: 'Pas bien', label: 'Pas bien', trigger: '3' }
