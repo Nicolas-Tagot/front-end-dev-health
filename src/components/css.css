@@ -6,6 +6,9 @@
   padding: 10px;
 
 }
+.flex{
+  display: flex;
+}
 .login{
   margin-right: 15px;
   width: 50px;
@@ -21,13 +24,10 @@
 .champ{
   border: none;
   border-radius: 9px;
-  width: 10px;
+  width: 200px;
   transition: 0.1s;
 }
-.champ:hover{
-  width: 260px;
-  transition: 2.5s;
-}
+
 .valid{
   background: linear-gradient(180deg, #ffc164 0%, #f59300 46.12%, #f59300 97.02%);
   transition: 0.1s;
@@ -55,7 +55,7 @@
 }
 .etatG{
   padding: 9px;
-  width: 500px;
+
   margin-top: 5px;
   margin-left: 30px;
   display: flex;

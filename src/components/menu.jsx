@@ -1,6 +1,7 @@
 import React from 'react';
 import "./css.css";
 import AppliWiewed from "./AppliWiewed";
+import Add from "./add";
 import Suivis from "./suivis";
 import Medics from "./medicament"
 import {
@@ -25,6 +26,7 @@ function Menu() {
           <Link to="/suivis"><input type="button" className="btnNav" value="Suivis"/></Link>
           <Link to="/medics"><input type="button" className="btnNav" value="Médicaments"/></Link>
           <Link to="/commentaires"><input type="button" className="btnNav" value="Commentaires"/></Link>
+          <Link to="/add"><input type="button" className="btnNav" value="Modifier l'assistant"/></Link>
       </div>
       <div className="visual">
 
@@ -38,6 +40,9 @@ function Menu() {
           <Route path="/commentaires">
             <AppliWiewed />
         </Route>
+        <Route path="/add">
+          <Add />
+      </Route>
         </Switch>
 
       </div>
