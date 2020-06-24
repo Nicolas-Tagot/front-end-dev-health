@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import './Popup.css'
-
+import './Patient.css'
 Modal.setAppElement('#root');
 function Popup () {
     const [modalIsOpen, setModalOpen,] = useState(false);
@@ -10,7 +10,7 @@ function Popup () {
 
     return (
         <div>
-            <div className="resultDiv">
+            <div className="wrapper">
               
                 <img src="/svg/stethoscope-icon.svg" alt="icon bot" onClick={() => setModalOpen(true) } className={modalIsOpen === true ? "BotButtonOff" :"BotButtonOn"} />
                

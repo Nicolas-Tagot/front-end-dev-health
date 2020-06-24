@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Patient.css'
 
 class SearchBar extends Component {
   constructor (props) {
@@ -21,14 +22,16 @@ class SearchBar extends Component {
   render () {
     return (
       <div className='searchbar-container'>
-        <form onSubmit={e => e.preventDefault()}>
-          <input
+        <form  onSubmit={e => e.preventDefault()}>
+          <input 
+            className='searchBarInput'
             type='text'
             size='45'
             placeholder='Recherche Docteur'
             onChange={this.handleSearch.bind(this)}
             value={this.state.username} />
           <button
+            className="searchButton"
             type='submit'
             onClick={this.handleGoClick.bind(this)}>
             Search

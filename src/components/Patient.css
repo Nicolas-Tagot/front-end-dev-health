@@ -1,0 +1,45 @@
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 8%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.patientTitle{
+    margin-top: 3%;
+    color:#0596de;
+}
+.patientLog{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.searchbar-container{
+display: flex;
+justify-content: center;
+  margin-top: 12%;
+ 
+}
+ .searchBarInput {
+width: 85%;
+height: 25px; 
+}
+
+ .searchButton{
+    height: 30px;  
+} 
+.wrapper {
+    margin-top: 15%;
+    display: flex ;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
