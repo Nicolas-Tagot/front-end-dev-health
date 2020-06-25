@@ -5,7 +5,7 @@ class SearchBar extends Component {
   constructor (props) {
     super(props)
     this.state = {
-      username: ''
+      dataName: ''
     }
   }
 
@@ -15,7 +15,7 @@ class SearchBar extends Component {
 
   handleGoClick () {
     if (!this.props.isFetchingUser) {
-      this.props.actions.fetchUser(this.state)
+      this.props.actions.fetchdata(this.state)
     }
   }
 
@@ -29,7 +29,7 @@ class SearchBar extends Component {
             size='70'
             placeholder='Recherche Docteur'
             onChange={this.handleSearch.bind(this)}
-            value={this.state.username} />
+            value={this.state.data} />
           <button
             className="searchButton"
             type='submit'

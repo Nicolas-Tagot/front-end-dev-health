@@ -38,9 +38,9 @@ class Patient extends React.Component {
         </div>
         </div>
         <section className='rdv'>
-          <h3 className='rdvTitle'>
+          <h2 className='rdvTitle'>
             mes rendez-vous à venir
-          </h3>
+          </h2>
         <article className='docCard'>
         <img src="/svg/avatar.svg" alt="user id" className ="patientLog" />
 
@@ -59,7 +59,7 @@ class Patient extends React.Component {
         </article>
         </section>
         <section>
-          <h3 className="libraryTitle">Les docteurs disponibles dans votre ville</h3>
+          <h2 className="libraryTitle">Les docteurs disponibles dans votre ville</h2>
           <div className = "docLibrary">
           <Contact
            img_url = "https://cdn.pixabay.com/photo/2020/04/15/17/34/medical-5047624_960_720.png"

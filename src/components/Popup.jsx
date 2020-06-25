@@ -11,7 +11,7 @@ function Popup () {
         <div>
             <div className="wrapper">
               
-                <img src="/svg/stethoscope-icon.svg" alt="icon bot" onClick={() => setModalOpen(true) } className={modalIsOpen === true ? "BotButtonOff" :"BotButtonOn"} />
+                <img src="/pics/bot.jpg" alt="icon bot" onClick={() => setModalOpen(true) } className={modalIsOpen === true ? "BotButtonOff" :"BotButtonOn"} />
                
             </div>
             <Modal 
@@ -20,17 +20,17 @@ function Popup () {
             isOpen={modalIsOpen} 
             onRequestClose={() => setModalOpen(false)}
             >
-                <div>
-                    <div  className="ModalQuote">
-                      <span>BOT system</span> {/* /mettre ici l'appel du module bot */}
-                    </div>
-                    <button 
+                <div> <button 
                     className="ModalButton"
                     type="button" 
                     onClick={() => setModalOpen(false)} 
                     >
-                      <img src="/svg/close.svg" alt="icon close" />
+                      <img src="/svg/close.svg" alt="icon close" width='8px'/>
                     </button>
+                    <div  className="ModalQuote">
+                      <span>BOT system</span> {/* /mettre ici l'appel du module bot */}
+                    </div>
+                   
                 </div>
             </Modal>
         </div>

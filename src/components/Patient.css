@@ -58,7 +58,7 @@ color: #ffffff;
 }
 
 .bodysearch {
-    margin-top: 5%;
+margin-top: 5%;
  display: flex;
   flex-direction: column;
 }
@@ -86,14 +86,14 @@ height: 30px;
 }
 
 .Modal {
-    position: absolute;
-    top: 20%;
-    left: 20%;
-    right: 60%;
-    bottom: 20%;
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    height:60%;
     border-style: solid;
     position: fixed;
-    top: 0;
+    right:0px;
+    background-color: darkgray;
     }
   
   
@@ -101,8 +101,9 @@ height: 30px;
     position: fixed;
     bottom: 0px;
     margin-bottom: 2%;
-    width: 7%;
+    width: 8%;
     cursor: pointer;
+    border-radius: 50%;
     
   }
     
@@ -117,7 +118,7 @@ color: #0596de;
 
 .rdv{
     margin-left: 5%;
-    margin-top: 5%;
+    margin-top: 2%;
 }
 
 .docCard, .Contact{
@@ -139,6 +140,7 @@ color: #0596de;
     margin-left: 2%;
 }
 .avatar{
+    border-radius: 50%;
     height: 60%;
     width: 30%;
     margin:2%;
@@ -167,7 +169,8 @@ margin-left: 5%;
 }
 
 .libraryTitle{
-    margin: 5%;
+    margin-left: 5%;
+    margin-top: 5%;
     color: #0596de;
 }
 
