@@ -17,14 +17,16 @@ class Add extends React.Component {
     super(props);
     this.state = {
       tableau : [1],
-      get : [],
+      selectionTemp : [],
     };
   }
 componentDidMount(){
+    const set = this
       axios.get("http://localhost:3004/templates")
       .then(function (response) {
+
   const data = response.data;
-  this.setState({ get : data })
+  set.setState({ selectionTemp : data })
   console.log(data);
 })
 .catch(function (error) {
@@ -66,7 +68,7 @@ componentDidMount(){
     )} )}
     <input type="button" className="valid" onClick={() => this.ajouter()} value="Ajouter" />
     <h3>Questionaire pré-remplis</h3>
-    <select className='etatG'>{this.state.get.map( (type) => <option>{type.name}</option> )}</select>
+    <select className='etatG'>{this.state.selectionTemp.map( (type) => <option>{type.name}</option> )}</select>
 
   <Link to="/suivis"><input type='button' className="valid" value="Valider" /> </Link>
 
