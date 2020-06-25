@@ -1,26 +1,26 @@
-import React from 'react';
+import React from "react";
 import "./css.css";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class AppliWiewed extends React.Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {};
   }
   render() {
-
-
-  return (
-    <div>
-    {this.props.id}
-    <div className="etatG">
+    return (
+      <div>
+        <div>
+          <p>
+            {this.props.id}
+            {this.props.historique.map((item) => (
+              <div>
+                  <div className="etatG">{item.heure} : {item.response}</div>
+              </div>
+            ))}
+          </p>
+        </div>
+        {/* <div className="etatG">
       <div className="etat R" ></div>
       <p className="centered">Bot send message to "Mum" for "News" etat= "mal"</p>
     </div>
@@ -43,9 +43,10 @@ class AppliWiewed extends React.Component {
       <div className="etatG">
         <div className="etat V" ></div>
         <p className="centered">Mardi 25 - 10:50</p>
+      </div> */}
       </div>
-    </div>
-  );
-}}
+    );
+  }
+}
 
 export default AppliWiewed;

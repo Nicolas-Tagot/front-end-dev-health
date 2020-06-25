@@ -12,6 +12,7 @@ const selectOne = ["heure","jour","semaine", "mois"];
 const number = [1,2,3,4,5,6,7,8,9,10];
 const typerdv = ['Durée du traitement','prise de poids', 'prise medicament', 'prise de rendez- vous','prise de sang'];
 const selection = ['aucun',"grossesse","diabete","rythme cardiaque"]
+
 class Add extends React.Component {
   constructor(props){
     super(props);
