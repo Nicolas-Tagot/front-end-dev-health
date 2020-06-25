@@ -27,14 +27,9 @@ class SimpleForm extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
-  componentWillMount() {
-    const { steps } = this.props;
-    const { name, gender, age } = steps;
-
-    this.setState({ name, gender, age });
+  onSubmit(value) {
+    console.log(value)
   }
-
-  // onSubmit(value) {
   //   const url = 'http://localhost:8000/response/';
   //   axios
   //   .post(url, value)
@@ -60,81 +55,73 @@ class SimpleForm extends Component {
             {
               id: "1",
               message:
-                "Bonjour Marie, Félicitations ! Dr Colas m'informe que tu commences ton deuxième trimestre de grossesse, comment ça se passe ?",
+                "Bonjour Marie, Félicitations ! Dr Colas m'informe que tu es enceintes, je vais t'accompagner durant ta grossesse !",
               trigger: "2",
             },
             {
               id: "2",
-              user: true,
+              message: "Durant cette accompagnement, je vais te rappeler les moments où tu devras prendre rendez-vous avec des praticiens mais aussi te demander comme tu te sens :)",
               trigger: "3",
-              validator: (value) => {
-                if (
-                  value === "Très bien" ||
-                  value === "Bien" ||
-                  value === "Moyen" ||
-                  value === "Pas bien"
-                ) {
-                  return true;
-                } else {
-                  return "Je ne comprend pas ta réponse";
-                }
-              },
             },
             {
               id: "3",
-              message: "Parfait !",
-              trigger: "6",
+              message: "Ca te va ?",
+              trigger: "4",
             },
             {
-              id: "6",
-              message: " As-tu pris ton rdv pour l'échographie du 5ième mois?",
+              id: "4",
+              options: [
+                { value: "Oui", label: "Oui", trigger: () => {
+                  this.onSubmit("Oui");
+                  return '5'}
+                 },
+                { value: "Non", label: "Non", trigger: () => {
+                  this.onSubmit("non");
+                  return '6'}
+                 },
+              ],
+            },
+            {
+              id: "5",
+              message: "Parfait ! ",
               trigger: "7",
             },
             {
+              id: "6",
+              message: "Très bien, si tu désires de nouveau faire appel à moi hésites pas ! :)",
+              trigger: "9",
+            },
+            {
               id: "7",
+              message: "À quelle fréquence désires tu que je prenne des nouvelles de toi ?",
+              trigger: "8",
+            },
+            {
+              id: "8",
               options: [
-                { value: "Oui", label: "Oui", trigger: "11" },
-                { value: "Non", label: "Non", trigger: "11" },
+                { value: "Journalier", label: "Journalier", trigger: () => {
+                  this.onSubmit("Journalier");
+                  return '9'}
+                 },
+                { value: "Hebdomadaire", label: "Hebdomadaire", trigger: () => {
+                  this.onSubmit("Hebdomadaire");
+                  return '9'}
+                 },
               ],
             },
-            // {
-            //   id: '6',
-            //   message: 'Q\'est-ce qui ne va pas ?',
-            //   trigger: '11',
-            // },
-            // {
-            //   id: '5',
-            //   options: [
-            //     { value: 'Nausées', label: 'Nausées', trigger: '6' },
-            //     { value: 'Angoisses', label: 'Angoisses', trigger: '6' },
-            //     { value: 'Fatigue', label: 'Fatigue', trigger: '6' },
-            //   ],
-            // },
-            // {
-            //   id: '6',
-            //   message: 'Appelle Dr Colas, ton médecin traitant ou envoies lui un mail : dr.colas@gmail.com. As-tu pris ton rdv pour l\'échographie du 5ième mois?',
-            //   trigger: '8',
-            // },
-            // {
-            //   id: '8',
-            //   options: [
-            //     { value: 'Oui', label: 'Oui', trigger: '9' },
-            //     { value: 'Non', label: 'Non', trigger: '10' },
-            //   ],
-            // },
-            // {
-            //   id: '9',
-            //   message: 'Super !',
-            //   trigger: '11',
-            // },
-            // {
-            //   id: '10',
-            //   message: 'Penses à le faire ! Si tu souhaites connaitre le sexe de bébé, c\'est le moment !',
-            //   trigger: '11',
-            // },
+            {
+              id: "9",
+              message: "Très bien, on fait comme ça !",
+              trigger: "10",
+            },
+            {
+              id: "10",
+              message: "Tu arrives bientôt à ta 8ème semaine de grossesse, penses à prendre rendez-vous pour ta première écographie.",
+              trigger: "11",
+            },
             {
               id: "11",
-              message: "Bonne journée :)",
+              message: "À bientôt :)",
               end: true,
             },
           ]}
