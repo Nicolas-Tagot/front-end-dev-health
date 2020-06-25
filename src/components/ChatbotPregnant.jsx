@@ -15,7 +15,7 @@ const theme = {
   userBubbleColor: "#fff",
   userFontColor: "#4a4a4a",
   botAvatar:
-    "https://image.freepik.com/vecteurs-libre/icone-medecin-avatar-blanc_136162-58.jpg",
+    "https://image.flaticon.com/icons/png/512/122/122454.png",
 };
 
 class SimpleForm extends Component {
@@ -28,25 +28,40 @@ class SimpleForm extends Component {
   }
 
   onSubmit(value) {
-    console.log(value)
+    console.log(value);
+    const url = 'http://localhost:8000/response/';
+    axios
+    .post(url, value)
+    .then(res => res.data)
+    .then(res => {
+      console.log(res);
+      //alert('I have got your answer!');
+    })
+    .catch(error => {
+      console.log(error);
+      //alert(' Error !');
+    })
+    return 4;
   }
-  //   const url = 'http://localhost:8000/response/';
-  //   axios
-  //   .post(url, value)
-  //   .then(res => res.data)
-  //   .then(res => {
-  //     console.log(res);
-  //     alert('I have got your answer!');
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //     alert(' Error ! ');
-  //   })
-  //   return 4;
-  // }
+
+  onSubmitPerso(value) {
+    console.log(value);
+    const url = 'http://localhost:8000/response/';
+    axios
+    .post(url, {response: value, perso: 1,})
+    .then(res => res.data)
+    .then(res => {
+      console.log(res);
+      // alert('I have got your answer!');
+    })
+    .catch(error => {
+      console.log(error);
+      // alert(' Error ! ');
+    })
+    return 4;
+  }
 
   render() {
-    // const getResponse = this.onSubmit();
     return (
       <ThemeProvider theme={theme}>
         <ChatBot
@@ -100,11 +115,11 @@ class SimpleForm extends Component {
               id: "8",
               options: [
                 { value: "Journalier", label: "Journalier", trigger: () => {
-                  this.onSubmit("Journalier");
+                  this.onSubmitPerso("Désire être contacté tous les jours");
                   return '9'}
                  },
                 { value: "Hebdomadaire", label: "Hebdomadaire", trigger: () => {
-                  this.onSubmit("Hebdomadaire");
+                  this.onSubmitPerso("Désire être contacté une fois par semaine");
                   return '9'}
                  },
               ],

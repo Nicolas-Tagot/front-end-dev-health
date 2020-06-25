@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import ChatBot from "react-simple-chatbot";
 import { ThemeProvider } from "styled-components";
+import axios from "axios";
 
 // all available props
 const theme = {
@@ -21,26 +22,58 @@ class SimpleForm extends Component {
     this.state = {
       response: "",
     };
-    this.onSubmit = this.onSubmit.bind(this);
   }
 
-  onSubmit(value) {
+  onSubmitPerso(value) {
     console.log(value);
+    const url = 'http://localhost:8000/response/';
+    axios
+    .post(url, {response: value, perso: 1,})
+    .then(res => res.data)
+    .then(res => {
+      console.log(res);
+      // alert('I have got your answer!');
+    })
+    .catch(error => {
+      console.log(error);
+      // alert(' Error ! ');
+    })
+    return 4;
   }
-  //   const url = 'http://localhost:8000/response/';
-  //   axios
-  //   .post(url, value)
-  //   .then(res => res.data)
-  //   .then(res => {
-  //     console.log(res);
-  //     alert('I have got your answer!');
-  //   })
-  //   .catch(error => {
-  //     console.log(error);
-  //     alert(' Error ! ');
-  //   })
-  //   return 4;
-  // }
+
+  onSubmitMedic(value) {
+    console.log(value);
+    const url = 'http://localhost:8000/response/';
+    axios
+    .post(url, {response: value, medic: 1,})
+    .then(res => res.data)
+    .then(res => {
+      console.log(res);
+      //alert('I have got your answer!');
+    })
+    .catch(error => {
+      console.log(error);
+      //alert(' Error ! ');
+    })
+    return 4;
+  }
+
+  onSubmitSante(value) {
+    console.log(value);
+    const url = 'http://localhost:8000/response/';
+    axios
+    .post(url, {response: value, sante: 1,})
+    .then(res => res.data)
+    .then(res => {
+      console.log(res);
+      // alert('I have got your answer!');
+    })
+    .catch(error => {
+      console.log(error);
+      // alert(' Error ! ');
+    })
+    return 4;
+  }
 
   render() {
     return (
@@ -60,7 +93,7 @@ class SimpleForm extends Component {
                   value: "Très bien",
                   label: "Très bien",
                   trigger: () => {
-                    this.onSubmit("très bien");
+                    this.onSubmitPerso("Moral : très bien");
                     return "4";
                   },
                 },
@@ -68,7 +101,7 @@ class SimpleForm extends Component {
                   value: "Bien",
                   label: "Bien",
                   trigger: () => {
-                    this.onSubmit("Bien");
+                    this.onSubmitPerso("Moral : Bien");
                     return "4";
                   },
                 },
@@ -76,7 +109,7 @@ class SimpleForm extends Component {
                   value: "Moyen",
                   label: "Moyen",
                   trigger: () => {
-                    this.onSubmit("Moyen");
+                    this.onSubmitPerso("Moral : Moyen");
                     return "3";
                   },
                 },
@@ -84,7 +117,7 @@ class SimpleForm extends Component {
                   value: "Pas bien",
                   label: "Pas bien",
                   trigger: () => {
-                    this.onSubmit("Pas bien");
+                    this.onSubmitPerso("Moral : Pas bien");
                     return "3";
                   },
                 },
@@ -102,10 +135,7 @@ class SimpleForm extends Component {
                 {
                   value: "Santé",
                   label: "Santé",
-                  trigger: () => {
-                    this.onSubmit("Santé");
-                    return "7";
-                  },
+                  trigger: '7'
                 },
                 { value: "Travail", label: "Travail", trigger: "6" },
               ],
@@ -135,7 +165,7 @@ class SimpleForm extends Component {
                   value: "Oui",
                   label: "Oui",
                   trigger: () => {
-                    this.onSubmit("A bien pris son comprimé");
+                    this.onSubmitMedic("A bien pris son comprimé");
                     return "9";
                   },
                 },
@@ -143,7 +173,7 @@ class SimpleForm extends Component {
                   value: "Non",
                   label: "Non",
                   trigger: () => {
-                    this.onSubmit("N'a pas pris son comprimé");
+                    this.onSubmitMedic("N'a pas pris son comprimé");
                     return "10";
                   },
                 },
@@ -173,7 +203,7 @@ class SimpleForm extends Component {
                   value: "Oui",
                   label: "Oui",
                   trigger: () => {
-                    this.onSubmit("A bien vérifié son taux de glycémie");
+                    this.onSubmitSante("A bien vérifié son taux de glycémie");
                     return "13";
                   },
                 },
@@ -181,7 +211,7 @@ class SimpleForm extends Component {
                   value: "Non",
                   label: "Non",
                   trigger: () => {
-                    this.onSubmit("N'a pas vérifié son taux de glycémie");
+                    this.onSubmitSante("N'a pas vérifié son taux de glycémie");
                     return "14";
                   },
                 },
@@ -205,7 +235,7 @@ class SimpleForm extends Component {
                   value: "Faible < 0,45g/l",
                   label: "Faible < 0,45g/l",
                   trigger: () => {
-                    this.onSubmit("Faible < 0,45g/l");
+                    this.onSubmitSante("Taux de glycémie faible < 0,45g/l");
                     return "16";
                   },
                 },
@@ -213,7 +243,7 @@ class SimpleForm extends Component {
                   value: "Normal > 0,45g/l et < 1,26g/l",
                   label: "Normal > 0,45g/l et < 1,26g/l",
                   trigger: () => {
-                    this.onSubmit("Normal > 0,45g/l et < 1,26g/l");
+                    this.onSubmitSante("Taux de glycémie normal > 0,45g/l et < 1,26g/l");
                     return "17";
                   },
                 },
@@ -221,7 +251,7 @@ class SimpleForm extends Component {
                   value: "Élevé > à 1,26g/l",
                   label: "Élevé > à 1,26g/l",
                   trigger: () => {
-                    this.onSubmit("Élevé > à 1,26g/l");
+                    this.onSubmitSante("Taux de glycémie élevé > à 1,26g/l");
                     return "18";
                   },
                 },
