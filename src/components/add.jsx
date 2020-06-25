@@ -50,7 +50,7 @@ componentDidMount(){
   render(){
   return (
     <div>
-
+      {this.props.id}
     <h3>Type et durée :</h3>
     {this.state.tableau.map( (type) => { return (
       <div className="flex">

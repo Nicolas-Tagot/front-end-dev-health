@@ -8,9 +8,17 @@ import {
 } from "react-router-dom";
 
 
-function Suivis() {
+class Suivis extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
+  render() {
+
+
   return (
     <div>
+      {this.props.id}
       <div className="etatG">
         <div className="etat V" ></div>
         <p className="centered"> Taux insuline: 30mg - Mardi 25 - 10:50</p>
@@ -37,6 +45,6 @@ function Suivis() {
       </div>
     </div>
   );
-}
+}}
 
 export default Suivis;

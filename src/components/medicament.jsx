@@ -8,12 +8,19 @@ import {
 } from "react-router-dom";
 
 
-function AppliWiewed() {
+class AppliWiewed extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
+  render() {
+
   return (
     <div>
-      <div className="etatG">
+
+        <div className="etatG">
         <div className="etat Y" ></div>
-        <p className="centered">prise du médicament - Mardi 25 - 10:50</p>
+        <p className="centered">prise du médicament - {this.props.id} Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
         <div className="etat R" ></div>
@@ -33,6 +40,6 @@ function AppliWiewed() {
       </div>
     </div>
   );
-}
+}}
 
 export default AppliWiewed;

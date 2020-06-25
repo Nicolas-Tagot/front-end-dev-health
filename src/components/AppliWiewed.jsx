@@ -8,9 +8,18 @@ import {
 } from "react-router-dom";
 
 
-function AppliWiewed() {
+class AppliWiewed extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {}
+  }
+  render() {
+
+
   return (
     <div>
+    {this.props.id}
     <div className="etatG">
       <div className="etat R" ></div>
       <p className="centered">Bot send message to "Mum" for "News" etat= "mal"</p>
@@ -37,6 +46,6 @@ function AppliWiewed() {
       </div>
     </div>
   );
-}
+}}
 
 export default AppliWiewed;

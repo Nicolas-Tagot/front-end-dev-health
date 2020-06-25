@@ -12,14 +12,37 @@ import {
 } from "react-router-dom";
 
 
-function Menu() {
+class Menu extends React.Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      value :'',
+      id: ''
+    };
+   this.handleChange = this.handleChange.bind(this);
+   this.validator = this.validator.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({value: event.target.value});
+  }
+  validator(event) {
+    const num = this.state.value
+    this.setState({id: num});
+  }
+
+render(){
+
+const { id } = this.state
+
   return (
+
     <div>
     <Router>
       <div className="top">
         <div className="login"></div>
-          <input className="champ" value="n° du patient" />
-          <input type="button" className="valid" value="valider" />
+          <input className="champ" value={this.state.value} onChange={this.handleChange} />
+          <input type="button" className="valid" value="valider" onClick={this.validator} />
         </div>
       <div className="centre">
         <div className="navigation">
@@ -32,16 +55,16 @@ function Menu() {
 
           <Switch>
           <Route path="/medics">
-            <Medics />
+            <Medics id={id} />
         </Route>
             <Route path="/suivis">
-              <Suivis />
+              <Suivis id={id}/>
           </Route>
           <Route path="/commentaires">
-            <AppliWiewed />
+            <AppliWiewed id={id}/>
         </Route>
         <Route path="/add">
-          <Add />
+          <Add id={id}/>
       </Route>
         </Switch>
 
@@ -50,6 +73,7 @@ function Menu() {
         </Router>
     </div>
   );
+}
 }
 
 export default Menu;
