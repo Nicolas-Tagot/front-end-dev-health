@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import './Popup.css'
 import './Patient.css'
 Modal.setAppElement('#root');
 function Popup () {
