@@ -1,6 +1,5 @@
 import React from "react";
 import "./css.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class AppliWiewed extends React.Component {
   constructor(props) {
@@ -14,9 +13,9 @@ class AppliWiewed extends React.Component {
           {this.props.id}
           {this.props.historique.map((item) => (
             <div>
-              <div className="etatG">
-                {item.heure} : {item.response}
-              </div>
+              {item.medic === 1 ? (
+                <div className="etatG">{item.heure} : {item.response}</div>
+              ) : null}
             </div>
           ))}
         </p>

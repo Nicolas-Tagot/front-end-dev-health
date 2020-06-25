@@ -2,9 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import "./css.css";
 import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+  BrowserRouter as
   Link
 } from "react-router-dom";
 

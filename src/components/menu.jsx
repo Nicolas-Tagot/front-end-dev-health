@@ -41,6 +41,21 @@ class Menu extends React.Component {
       .then(function() {
         // always executed
       });
+
+    axios
+      .get(`http://localhost:8000/response/${num}`)
+      .then(function(response) {
+        const datas = response.data;
+        set.setState({ data: datas });
+        console.log(datas);
+      })
+      .catch(function(error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function() {
+        // always executed
+      });
   }
 
   render() {
