@@ -26,7 +26,7 @@ class SearchBar extends Component {
           <input 
             className='searchBarInput'
             type='text'
-            size='45'
+            size='70'
             placeholder='Recherche Docteur'
             onChange={this.handleSearch.bind(this)}
             value={this.state.username} />
