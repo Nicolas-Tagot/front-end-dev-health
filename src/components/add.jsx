@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import "./css.css";
 import {
   BrowserRouter as Router,
@@ -16,8 +17,25 @@ class Add extends React.Component {
     super(props);
     this.state = {
       tableau : [1],
+      get : [],
     };
   }
+componentDidMount(){
+      axios.get("http://localhost:3004/templates")
+      .then(function (response) {
+  const data = response.data;
+  this.setState({ get : data })
+  console.log(data);
+})
+.catch(function (error) {
+  // handle error
+  console.log(error);
+})
+.then(function () {
+  // always executed
+});
+  }
+
   ajouter(){
     console.log("click")
     const newtableau = this.state.tableau
@@ -25,6 +43,7 @@ class Add extends React.Component {
     this.setState({ tableau : newtableau })
     console.log(this.state.tableau)
   }
+
 
   render(){
   return (
@@ -47,7 +66,7 @@ class Add extends React.Component {
     )} )}
     <input type="button" className="valid" onClick={() => this.ajouter()} value="Ajouter" />
     <h3>Questionaire pré-remplis</h3>
-    <select className='etatG'>{selection.map( (type) => <option>{type}</option> )}</select>
+    <select className='etatG'>{this.state.get.map( (type) => <option>{type.name}</option> )}</select>
 
   <Link to="/suivis"><input type='button' className="valid" value="Valider" /> </Link>
 
