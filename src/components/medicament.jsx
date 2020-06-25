@@ -17,10 +17,10 @@ class AppliWiewed extends React.Component {
 
   return (
     <div>
-
+        {this.props.id}
         <div className="etatG">
         <div className="etat Y" ></div>
-        <p className="centered">prise du médicament - {this.props.id} Mardi 25 - 10:50</p>
+        <p className="centered">prise du médicament -  Mardi 25 - 10:50</p>
       </div>
       <div className="etatG">
         <div className="etat R" ></div>

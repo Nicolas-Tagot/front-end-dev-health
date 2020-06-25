@@ -4,6 +4,7 @@ import AppliWiewed from "./AppliWiewed";
 import Add from "./add";
 import Suivis from "./suivis";
 import Medics from "./medicament"
+import axios from 'axios';
 import {
   BrowserRouter as Router,
   Switch,
@@ -17,7 +18,8 @@ class Menu extends React.Component {
     super(props);
     this.state = {
       value :'',
-      id: ''
+      id: '',
+      name: ''
     };
    this.handleChange = this.handleChange.bind(this);
    this.validator = this.validator.bind(this);
@@ -28,12 +30,26 @@ class Menu extends React.Component {
   }
   validator(event) {
     const num = this.state.value
-    this.setState({id: num});
+    const set = this
+      axios.get(`http://localhost:3004/patient/${num}`)
+      .then(function (response) {
+        const nom = response.data.name;
+        set.setState({ name : nom })
+        console.log(nom);
+})
+.catch(function (error) {
+  // handle error
+  console.log(error);
+})
+.then(function () {
+  // always executed
+});
+
   }
 
 render(){
 
-const { id } = this.state
+const { name } = this.state
 
   return (
 
@@ -46,6 +62,7 @@ const { id } = this.state
         </div>
       <div className="centre">
         <div className="navigation">
+
           <Link to="/suivis"><input type="button" className="btnNav" value="Suivis"/></Link>
           <Link to="/medics"><input type="button" className="btnNav" value="Médicaments"/></Link>
           <Link to="/commentaires"><input type="button" className="btnNav" value="Commentaires"/></Link>
@@ -55,16 +72,16 @@ const { id } = this.state
 
           <Switch>
           <Route path="/medics">
-            <Medics id={id} />
+            <Medics id={name} />
         </Route>
             <Route path="/suivis">
-              <Suivis id={id}/>
+              <Suivis id={name}/>
           </Route>
           <Route path="/commentaires">
-            <AppliWiewed id={id}/>
+            <AppliWiewed id={name}/>
         </Route>
         <Route path="/add">
-          <Add id={id}/>
+          <Add id={name}/>
       </Route>
         </Switch>
 
