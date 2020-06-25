@@ -31,7 +31,7 @@ class Menu extends React.Component {
   validator(event) {
     const num = this.state.value
     const set = this
-      axios.get(`http://localhost:3004/patient/${num}`)
+      axios.get(`http://localhost:8000/patient/${num}`)
       .then(function (response) {
         const nom = response.data.name;
         set.setState({ name : nom })

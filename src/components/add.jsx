@@ -22,7 +22,7 @@ class Add extends React.Component {
   }
 componentDidMount(){
     const set = this
-      axios.get("http://localhost:3004/templates")
+      axios.get("http://localhost:8000/templates")
       .then(function (response) {
 
   const data = response.data;
@@ -39,7 +39,6 @@ componentDidMount(){
   }
 
   ajouter(){
-    console.log("click")
     const newtableau = this.state.tableau
     newtableau.push(this.state.tableau.length + 1)
     this.setState({ tableau : newtableau })
