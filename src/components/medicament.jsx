@@ -17,29 +17,20 @@ class AppliWiewed extends React.Component {
 
   return (
     <div>
-        {this.props.id}
-        <div className="etatG">
-        <div className="etat Y" ></div>
-        <p className="centered">prise du médicament -  Mardi 25 - 10:50</p>
-      </div>
-      <div className="etatG">
-        <div className="etat R" ></div>
-        <p className="centered">Oublie médicament - Mardi 25 - 10:50</p>
-      </div>
-      <div className="etatG">
-        <div className="etat V" ></div>
-        <p className="centered">Mardi 25 - 10:50</p>
-      </div>
-      <div className="etatG">
-        <div className="etat Y" ></div>
-        <p className="centered">Mardi 25 - 10:50</p>
-      </div>
-      <div className="etatG">
-        <div className="etat Y" ></div>
-        <p className="centered">Mardi 25 - 10:50</p>
-      </div>
-    </div>
+        <p>{this.props.id}
+        {this.props.historique.map( (item) => (
+          <div>
+           { (item.medic===1) ? (
+            <div className="etatG">{item.response}
+            </div> ) : null}
+          </div>))}
+          </p>
+
+
+
+</div>
   );
-}}
+}
+}
 
 export default AppliWiewed;

@@ -18,8 +18,9 @@ class Menu extends React.Component {
     super(props);
     this.state = {
       value :'',
-      id: '',
-      name: ''
+      id: '0',
+      name: '',
+      data:[]
     };
    this.handleChange = this.handleChange.bind(this);
    this.validator = this.validator.bind(this);
@@ -28,6 +29,7 @@ class Menu extends React.Component {
   handleChange(event) {
     this.setState({value: event.target.value});
   }
+
   validator(event) {
     const num = this.state.value
     const set = this
@@ -36,20 +38,36 @@ class Menu extends React.Component {
         const nom = response.data.name;
         set.setState({ name : nom })
         console.log(nom);
-})
-.catch(function (error) {
-  // handle error
-  console.log(error);
-})
-.then(function () {
-  // always executed
-});
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+
+
+        axios.get(`http://localhost:8000/response/${num}`)
+        .then(function (response) {
+          const datas = response.data;
+          set.setState({ data : datas })
+          console.log(datas);
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+  .then(function () {
+    // always executed
+  });
+
 
   }
 
 render(){
 
-const { name } = this.state
+const { name, data } = this.state
 
   return (
 
@@ -72,16 +90,16 @@ const { name } = this.state
 
           <Switch>
           <Route path="/medics">
-            <Medics id={name} />
+            <Medics id={name} historique={data} />
         </Route>
             <Route path="/suivis">
-              <Suivis id={name}/>
+              <Suivis id={name} historique={data}/>
           </Route>
           <Route path="/commentaires">
-            <AppliWiewed id={name}/>
+            <AppliWiewed id={name} historique={data}/>
         </Route>
         <Route path="/add">
-          <Add id={name}/>
+          <Add id={name} historique={data}/>
       </Route>
         </Switch>
 
