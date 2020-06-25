@@ -92,13 +92,18 @@ height: 30px;
     right: 60%;
     bottom: 20%;
     border-style: solid;
-  }
+    position: fixed;
+    top: 0;
+    }
+  
   
   .BotButtonOn {
-   
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 2%;
     width: 7%;
     cursor: pointer;
-    position: sticky;
+    
   }
     
   
@@ -115,7 +120,7 @@ color: #0596de;
     margin-top: 5%;
 }
 
-.docCard{
+.docCard, .Contact{
     display: flex;
     flex-direction: row;
     background: #0596de;
@@ -123,9 +128,46 @@ color: #0596de;
     box-shadow:  #021c29 0px 0px 10px 3px;
     width: 25%;
 }
-.rdvDescription{
+.rdvDescription, .descriptionDoc, .infoDoc{
     display:flex;
     flex-direction: column;
     color: #ffffff;
-    margin-left: 5%;
+   
 }
+.Contact{
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+.avatar{
+    height: 60%;
+    width: 30%;
+    margin:2%;
+}
+
+.headerDoc{
+margin-left: 5%;
+    color: #ffffff;
+}
+.descriptionDoc{
+    margin-left: 5%;
+    width: 80%;
+}
+
+.PratiqueDoc{
+    font-size: 15px ;
+}
+
+.docLibrary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #ffffff; 
+    flex-wrap: wrap;
+    
+}
+
+.libraryTitle{
+    margin: 5%;
+    color: #0596de;
+}
+
