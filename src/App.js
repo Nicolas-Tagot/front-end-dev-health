@@ -9,7 +9,8 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
+import ChatBotDiabet from "./components/ChatbotDiabet";
+import ChatbotPregnant from "./components/ChatbotPregnant";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
        
      </Switch>
    </Router>
-
+      {/* <ChatBotDiabet />
+      <ChatbotPregnant /> */}
     </div>
   );
 }
