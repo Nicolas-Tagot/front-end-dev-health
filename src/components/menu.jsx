@@ -66,7 +66,7 @@ class Menu extends React.Component {
         <Router>
           <div className="top">
             <div className="login"></div>
-            <img src="public/pics/avatar_doc.png" alt="doc log" />
+            <img src="https://cdn.discordapp.com/attachments/725029497845317795/726039871000674344/medical-5047582_1280.png"  className="imageDoc" alt="doc log" />
             <input
               className="champ"
               value={this.state.value}

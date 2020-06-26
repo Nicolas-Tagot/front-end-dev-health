@@ -46,7 +46,7 @@ class SimpleForm extends Component {
     console.log(value);
     const url = 'http://localhost:8000/response/';
     axios
-    .post(url, {response: value, perso: 1, id_patient: 0})
+    .post(url, {response: value, perso: 1, id_patient: 2})
     .then(res => res.data)
     .then(res => {
       console.log(res);

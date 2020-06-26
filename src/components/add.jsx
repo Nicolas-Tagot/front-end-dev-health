@@ -66,16 +66,20 @@ componentDidMount(){
 
       </div>
     )} )}
-    <input type="button" className="valid" id="validtreatment" onClick={() => this.ajouter()} value="Ajouter" />
+       
+       <input type="button" className="valid marginTop"  onClick={() => this.ajouter()} value="Ajouter" />
+       
+
     <h3>Choisir un questionnaire type :
     </h3>
     <select className='etatG'>{this.state.selectionTemp.map( (type) => <option>{type.name}</option> )}</select>
 
-  <Link to="/suivis"><input type='button' className="valid" id="validfollowup" value="Valider" /> </Link>
+  <Link to="/suivis"><input type='button' className="valid marginTop"  value="Valider" /> </Link>
 
     </div>
   );
 }
 }
+
 
 export default Add;

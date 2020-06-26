@@ -1,3 +1,12 @@
+.imageDoc{
+  width : 50px;
+  margin-right : 8px; 
+}
+
+.marginTop {
+  margin : 5px;
+}
+
 .top{
   height: 50px;
   width: 100%;
@@ -28,13 +37,16 @@
   transition: 0.1s;
 }
 
-.valid{
+.valid
+{
   background: linear-gradient(180deg, #ffc164 0%, #f59300 46.12%, #f59300 97.02%);
   transition: 0.1s;
   margin-left: 10px;
   border-radius: 9px;
   width: 10%
 }
+
+
 .centre{
   display: flex;
   width: 90%;
@@ -115,8 +127,8 @@
  .add_menu{
    margin-left: 20%;
    margin-top: 5%;
- 
   width : 50%;
+  height:auto;
   padding: 5%;
   background-color: #0596de;
   display: flex;
@@ -132,7 +144,6 @@
    font-size: 30px
    };
  
-  #valid_treatment {
-  margin-left: 5%;
-}
 
+
+  
