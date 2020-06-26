@@ -46,7 +46,7 @@ class SimpleForm extends Component {
     console.log(value);
     const url = 'http://localhost:8000/response/';
     axios
-    .post(url, {response: value, perso: 1, id_patient: 1})
+    .post(url, {response: value, perso: 1, id_patient: 0})
     .then(res => res.data)
     .then(res => {
       console.log(res);
@@ -68,7 +68,7 @@ class SimpleForm extends Component {
             {
               id: "1",
               message:
-                "Bonjour Marie, Félicitations ! Dr Colas m'informe que tu es enceintes, je vais t'accompagner durant ta grossesse !",
+                "Félicitations ! Dr Colas m'informe que tu es enceintes, je vais t'accompagner durant ta grossesse !",
               trigger: "2",
             },
             {
@@ -102,7 +102,7 @@ class SimpleForm extends Component {
             {
               id: "6",
               message: "Très bien, si tu désires de nouveau faire appel à moi hésites pas ! :)",
-              trigger: "9",
+              trigger: "11",
             },
             {
               id: "7",

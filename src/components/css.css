@@ -14,7 +14,7 @@
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: linear-gradient(180deg, #ffc164 0%, #f59300 46.12%, #f59300 97.02%);
+  background-image: url('');
   transition: 2s;
 }
 .login:hover{
@@ -31,6 +31,9 @@
 .valid{
   background: linear-gradient(180deg, #ffc164 0%, #f59300 46.12%, #f59300 97.02%);
   transition: 0.1s;
+  margin-left: 10px;
+  border-radius: 9px;
+  width: 10%
 }
 .centre{
   display: flex;
@@ -47,6 +50,23 @@
 .btnNav{
   width: 200px;
   height: 100px;
+  margin-top: 2%;
+  color:white;
+  background-color: #0596de;
+  font-size: 16px;
+}
+.btnNav:hover {
+  transform: scale(1.1);
+  transition: 0.6s;
+}
+.patientName{
+  margin-left: 5%;
+  font-size: 16px;
+  margin-bottom: 2%;
+  color: black;
+}
+.listingDatas{
+  width: 50%;
 }
 .visual{
   width: 100%;
@@ -91,4 +111,28 @@
   .Y {
       background-color: yellow;
   }
+
+ .add_menu{
+   margin-left: 20%;
+   margin-top: 5%;
+ 
+  width : 50%;
+  padding: 5%;
+  background-color: #0596de;
+  display: flex;
+  flex-direction: column;
+ }
+
+ h3, .patientNameAdd {
+   color: #ffffff;
+ }
+
+ .patientName, .patientNameAdd{
+   font-style: bold;
+   font-size: 30px
+   };
+ 
+  #valid_treatment {
+  margin-left: 5%;
+}
 

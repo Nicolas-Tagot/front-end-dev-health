@@ -66,6 +66,7 @@ class Menu extends React.Component {
         <Router>
           <div className="top">
             <div className="login"></div>
+            <img src="public/pics/avatar_doc.png" alt="doc log" />
             <input
               className="champ"
               value={this.state.value}
@@ -74,26 +75,26 @@ class Menu extends React.Component {
             <input
               type="button"
               className="valid"
-              value="valider"
+              value="OK"
               onClick={this.validator}
             />
           </div>
           <div className="centre">
             <div className="navigation">
               <Link to="/doc/suivis">
-                <input type="button" className="btnNav" value="Suivis" />
+                <input type="button" className="btnNav" value="Suivi Médical" />
               </Link>
               <Link to="/doc/medics">
-                <input type="button" className="btnNav" value="Médicaments" />
+                <input type="button" className="btnNav" value="Suivi de traitements" />
               </Link>
               <Link to="/doc/commentaires">
-                <input type="button" className="btnNav" value="Commentaires" />
+                <input type="button" className="btnNav" value="Moral du patient" />
               </Link>
               <Link to="/doc/add">
                 <input
                   type="button"
                   className="btnNav"
-                  value="Modifier l'assistant"
+                  value="Paramétrer Doctobot"
                 />
               </Link>
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./css.css";
+import moment from "moment";
 
 class AppliWiewed extends React.Component {
   constructor(props) {
@@ -10,17 +11,19 @@ class AppliWiewed extends React.Component {
     return (
       <div>
         <p>
-          {this.props.id}
+          <div className="patientName">Patient : {this.props.id}</div>
           {this.props.historique.map((item) => (
-            <div>
+            <div className="listingDatas">
               {item.perso === 1 ? (
-                <div className="etatG">{item.heure} : {item.response}</div>
+                <div className="etatG">
+                  {moment(item.heure).format("DD/MM/YYYY")} : {item.response}
+                </div>
               ) : null}
             </div>
           ))}
         </p>
       </div>
-        /* <div className="etatG">
+      /* <div className="etatG">
       <div className="etat R" ></div>
       <p className="centered">Bot send message to "Mum" for "News" etat= "mal"</p>
     </div>

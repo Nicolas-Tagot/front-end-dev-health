@@ -6,10 +6,10 @@ import {
   Link
 } from "react-router-dom";
 
-const selectOne = ["heure","jour","semaine", "mois"];
-const number = [1,2,3,4,5,6,7,8,9,10];
-const typerdv = ['Durée du traitement','prise de poids', 'prise medicament', 'prise de rendez- vous','prise de sang'];
-const selection = ['aucun',"grossesse","diabete","rythme cardiaque"]
+const selectOne = ["jour","semaine", "mois"];
+const number = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+const typerdv = ['Durée du traitement', 'prise de rdv','prise de sang'];
+const selection = ['aucun',"grossesse","diabete de type 2","rythme cardiaque"]
 
 class Add extends React.Component {
   constructor(props){
@@ -47,9 +47,11 @@ componentDidMount(){
 
   render(){
   return (
-    <div>
-      {this.props.id}
-    <h3>Type et durée :</h3>
+    <div className="add_menu">
+      <div className="patientNameAdd">
+          Patient : {this.props.id}
+          </div>
+    <h3>Type de traitement et durée : </h3>
     {this.state.tableau.map( (type) => { return (
       <div className="flex">
       <select className='etatG'>
@@ -64,11 +66,12 @@ componentDidMount(){
 
       </div>
     )} )}
-    <input type="button" className="valid" onClick={() => this.ajouter()} value="Ajouter" />
-    <h3>Questionaire pré-remplis</h3>
+    <input type="button" className="valid" id="validtreatment" onClick={() => this.ajouter()} value="Ajouter" />
+    <h3>Choisir un questionnaire type :
+    </h3>
     <select className='etatG'>{this.state.selectionTemp.map( (type) => <option>{type.name}</option> )}</select>
 
-  <Link to="/suivis"><input type='button' className="valid" value="Valider" /> </Link>
+  <Link to="/suivis"><input type='button' className="valid" id="validfollowup" value="Valider" /> </Link>
 
     </div>
   );

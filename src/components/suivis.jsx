@@ -1,5 +1,6 @@
 import React from "react";
 import "./css.css";
+import moment from 'moment';
 
 class Suivis extends React.Component {
   constructor(props) {
@@ -10,11 +11,13 @@ class Suivis extends React.Component {
     return (
       <div>
         <p>
-          {this.props.id}
+          <div className="patientName">
+          Patient : {this.props.id}
+          </div>
           {this.props.historique.map((item) => (
-            <div>
+            <div className="listingDatas">
               {item.sante === 1 ? (
-                <div className="etatG">{item.response}</div>
+                <div className="etatG">{moment(item.heure).format('DD/MM/YYYY')} : {item.response}</div>
               ) : null}
             </div>
           ))}
