@@ -11,7 +11,7 @@ function Mobile () {
       <div className="phone">
         <img src="/pics/hackphone.png"  alt="mobile" />
    </div>
-   <div className="bot2">
+   <div className="botbot">
    <img src="/pics/bot2.png"  alt="bot" onClick={() => setModalOpen(true) } className="bot2Pic" />
   </div>
   <div className='titleContainer'>

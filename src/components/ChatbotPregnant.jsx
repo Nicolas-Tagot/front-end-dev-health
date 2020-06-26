@@ -5,17 +5,15 @@ import axios from "axios";
 
 // all available props
 const theme = {
-  background: "#f5f8fb",
+  background: "#e6e8e8",
   fontFamily: "Helvetica Neue",
-  headerBgColor: "#0596de",
+  headerBgColor: "#26ab91",
   headerFontColor: "#fff",
   headerFontSize: "20px",
   botBubbleColor: "#0596de",
   botFontColor: "#fff",
   userBubbleColor: "#fff",
   userFontColor: "#4a4a4a",
-  botAvatar:
-    "https://image.flaticon.com/icons/png/512/122/122454.png",
 };
 
 class SimpleForm extends Component {
