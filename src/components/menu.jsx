@@ -80,16 +80,16 @@ class Menu extends React.Component {
           </div>
           <div className="centre">
             <div className="navigation">
-              <Link to="/suivis">
+              <Link to="/doc/suivis">
                 <input type="button" className="btnNav" value="Suivis" />
               </Link>
-              <Link to="/medics">
+              <Link to="/doc/medics">
                 <input type="button" className="btnNav" value="Médicaments" />
               </Link>
-              <Link to="/commentaires">
+              <Link to="/doc/commentaires">
                 <input type="button" className="btnNav" value="Commentaires" />
               </Link>
-              <Link to="/add">
+              <Link to="/doc/add">
                 <input
                   type="button"
                   className="btnNav"
@@ -99,16 +99,16 @@ class Menu extends React.Component {
             </div>
             <div className="visual">
               <Switch>
-                <Route path="/medics">
+                <Route path="/doc/medics">
                   <Medics id={name} historique={data} />
                 </Route>
-                <Route path="/suivis">
+                <Route path="/doc/suivis">
                   <Suivis id={name} historique={data} />
                 </Route>
-                <Route path="/commentaires">
+                <Route path="/doc/commentaires">
                   <AppliWiewed id={name} historique={data} />
                 </Route>
-                <Route path="/add">
+                <Route path="/doc/add">
                   <Add id={name} historique={data} />
                 </Route>
               </Switch>

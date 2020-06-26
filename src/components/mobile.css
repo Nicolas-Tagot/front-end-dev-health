@@ -1,0 +1,52 @@
+
+.botContainer{
+    position: relative;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.phone, .bot2, .titleContainer{
+    position: absolute;
+  
+}
+.phone{
+    z-index: 1;
+}
+.bot2{
+    z-index: 2; 
+    margin-top: 107.5%;
+    margin-right: 32%;
+
+}
+.bot2Pic{
+    border-radius: 10%;
+    width: 19%;
+    height: 55px
+  
+}
+
+.titleContainer{
+    z-index: 3;
+    margin-top: 118%;
+   margin-left: 30%;
+}
+.botTitle{
+    color: #ffffff;
+    font-size: 11px;
+}
+
+.phoneModal{
+    position: absolute;
+   margin-left: 36%;
+   margin-top: 3.6%;
+    width: 24%;
+    height:79%;
+    z-index: 3;
+
+   
+   
+    background-color: darkgray; 
+}
+
+a{
+    color: #ffffff;
+}

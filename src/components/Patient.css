@@ -1,0 +1,187 @@
+header{
+    background-color:#0596de; 
+    height: 300px;
+}
+.navbar{
+display: flex ;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.logo{
+    width: 5%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+
+.patientTitle{
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 5%;
+    color: #ffffff;
+
+}
+
+.patientMenu-container{
+display: flex;
+flex-direction: row;
+width:40%;
+justify-content: space-between;
+
+}
+
+.patientMenu{
+display: flex;
+flex-direction: row;
+margin-top: 2%;
+}
+
+ul{
+width: max-content;
+color: #ffffff;
+}
+
+.patientLog{
+    position: relative;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+
+.introduction{
+   display: flex;
+   justify-content: center;
+   color: #0596de;
+}
+
+.bodysearch {
+margin-top: 5%;
+ display: flex;
+  flex-direction: column;
+}
+.searchbar-container{
+display: flex;
+justify-content: center;
+flex-direction: row;
+ margin-top: 2%;
+
+ 
+}
+ .searchBarInput {
+height: 30px; 
+}
+
+ .searchButton{
+    height: 30px;
+   
+} 
+.wrapper {
+    margin-top: 15%;
+    display: flex ;
+    justify-content: flex-end;
+    margin-right: 5%;
+}
+
+.Modal {
+    position: fixed;
+    bottom: 0px;
+    width: 25%;
+    height:60%;
+    border-style: solid;
+    position: fixed;
+    right:0px;
+    background-color: darkgray;
+    }
+  
+  
+  .BotButtonOn {
+    position: fixed;
+    bottom: 0px;
+    margin-bottom: 2%;
+    width: 8%;
+    cursor: pointer;
+    border-radius: 50%;
+    
+  }
+    
+  
+  .BotButtonOff {
+    display: none;
+  }
+  .rdvTitleContainer{
+      display: flex;
+     
+  }
+.rdvTitle {
+color: #0596de;
+
+}
+
+.rdv{
+  margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+.docCard, .Contact{
+    display: flex;
+    flex-direction: row;
+    background: #0596de;
+    border-radius: 5px;
+    box-shadow:  #021c29 0px 0px 10px 3px;
+    width: 25%;
+}
+.rdvDescription, .descriptionDoc, .infoDoc{
+    display:flex;
+    flex-direction: column;
+    color: #ffffff;
+   
+}
+.Contact{
+    margin-bottom: 5%;
+    margin-left: 2%;
+}
+.avatar{
+    border-radius: 50%;
+    height: 60%;
+    width: 30%;
+    margin:2%;
+}
+
+.headerDoc{
+margin-left: 5%;
+    color: #ffffff;
+}
+.descriptionDoc{
+    margin-left: 5%;
+    width: 80%;
+}
+
+.PratiqueDoc{
+    font-size: 15px ;
+}
+
+.docLibrary{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: #ffffff; 
+    flex-wrap: wrap;
+    
+}
+
+.libraryTitle{
+ 
+    color: #0596de;
+    
+}
+.libraryTitleContainer{
+margin-top: 3%;
+margin-left: 5%;
+display: flex;
+
+}
+

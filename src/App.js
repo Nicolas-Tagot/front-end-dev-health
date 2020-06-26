@@ -1,6 +1,8 @@
 import React from 'react';
 import './App.css';
 import Menu from './components/menu';
+import Patient from './components/Patient';
+import Mobile from './components/mobile';
 import {
   BrowserRouter as Router,
   Switch,
@@ -14,11 +16,19 @@ function App() {
     <div className="App">
     <Router>
     <Switch>
-       <Route path="/">
+      <Route path="/demo">
+       <Mobile />
+       </Route> 
+       <Route path="/doc">
         <Menu />
        </Route>
+       <Route path="/">
+         <Patient/>
+       </Route>
+       
      </Switch>
    </Router>
+
     </div>
   );
 }
