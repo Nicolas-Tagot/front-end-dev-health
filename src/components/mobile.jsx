@@ -1,6 +1,7 @@
 import React,{ useState } from "react";
 import './mobile.css';
-import Modal from 'react-modal'
+import Modal from 'react-modal';
+import ChatbotPregnant from './ChatbotPregnant';
 Modal.setAppElement('#root');
 function Mobile () {
     const [modalIsOpen, setModalOpen,] = useState(false);
@@ -14,7 +15,7 @@ function Mobile () {
    <img src="/pics/bot2.png"  alt="bot" onClick={() => setModalOpen(true) } className="bot2Pic" />
   </div>
   <div className='titleContainer'>
-      <p className="botTitle">Doc Bot</p>
+      <p className="botTitle">DoctoBot</p>
   </div>
     <div className="wrapper">      
             </div>
@@ -32,7 +33,7 @@ function Mobile () {
                       <img src="/svg/close.svg" alt="icon close" width='8px'/>
                     </button>
                     <div  className="ModalQuote">
-                      <span>BOT system</span> {/* /mettre ici l'appel du module bot */}
+                      <ChatbotPregnant /> {/* /mettre ici l'appel du module bot */}
                     </div>
                    
                 </div>

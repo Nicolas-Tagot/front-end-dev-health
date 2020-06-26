@@ -5,9 +5,9 @@ import axios from "axios";
 
 // all available props
 const theme = {
-  background: "#f5f8fb",
+  background: "#e6e8e8",
   fontFamily: "Helvetica Neue",
-  headerBgColor: "#0596de",
+  headerBgColor: "#26ab91",
   headerFontColor: "#fff",
   headerFontSize: "20px",
   botBubbleColor: "#0596de",

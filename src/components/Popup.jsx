@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Modal from 'react-modal';
-import './Patient.css'
+import './Patient.css';
+import ChatbotDiabet from './ChatbotDiabet';
 Modal.setAppElement('#root');
 function Popup () {
     const [modalIsOpen, setModalOpen,] = useState(false);
@@ -28,7 +29,7 @@ function Popup () {
                       <img src="/svg/close.svg" alt="icon close" width='8px'/>
                     </button>
                     <div  className="ModalQuote">
-                      <span>BOT system</span> {/* /mettre ici l'appel du module bot */}
+                      <ChatbotDiabet /> {/* /mettre ici l'appel du module bot */}
                     </div>
                    
                 </div>

@@ -87,15 +87,13 @@ height: 30px;
 
 .Modal {
     position: fixed;
-    bottom: 0px;
-    width: 25%;
-    height:60%;
-    border-style: solid;
+    bottom: 1px;
+    width: 380px;
+    border: none;
+    height:560px;
     position: fixed;
-    right:0px;
-    background-color: darkgray;
+    right:1px;
     }
-  
   
   .BotButtonOn {
     position: fixed;
